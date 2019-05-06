@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var changeButton: UIButton!
+    
+    private lazy var viewModel = ViewModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

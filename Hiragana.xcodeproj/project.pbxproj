@@ -14,6 +14,8 @@
 		CA720CB4227EC54F0097BEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA720CB3227EC54F0097BEE3 /* Assets.xcassets */; };
 		CA720CB7227EC54F0097BEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA720CB5227EC54F0097BEE3 /* LaunchScreen.storyboard */; };
 		CA720CBF227F46800097BEE3 /* KaiTi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA720CBE227F46800097BEE3 /* KaiTi.ttf */; };
+		CA720CC2228010850097BEE3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA720CC1228010850097BEE3 /* ViewModel.swift */; };
+		CA720CC4228011200097BEE3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA720CC3228011200097BEE3 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CA720CB6227EC54F0097BEE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA720CB8227EC54F0097BEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA720CBE227F46800097BEE3 /* KaiTi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaiTi.ttf; sourceTree = "<group>"; };
+		CA720CC1228010850097BEE3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CA720CC3228011200097BEE3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				01D4960C198EA459BCEC0EBD /* Pods-Hiragana.debug.xcconfig */,
 				4C39B567528C840D0BD56A78 /* Pods-Hiragana.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +86,8 @@
 			children = (
 				CA720CC0227FF48A0097BEE3 /* Fonts */,
 				CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */,
+				CA720CC3228011200097BEE3 /* Model.swift */,
+				CA720CC1228010850097BEE3 /* ViewModel.swift */,
 				CA720CAE227EC54E0097BEE3 /* ViewController.swift */,
 				CA720CB0227EC54E0097BEE3 /* Main.storyboard */,
 				CA720CB3227EC54F0097BEE3 /* Assets.xcassets */,
@@ -230,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA720CAF227EC54E0097BEE3 /* ViewController.swift in Sources */,
+				CA720CC2228010850097BEE3 /* ViewModel.swift in Sources */,
 				CA720CAD227EC54E0097BEE3 /* AppDelegate.swift in Sources */,
+				CA720CC4228011200097BEE3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

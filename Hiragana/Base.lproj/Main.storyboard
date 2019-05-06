@@ -133,6 +133,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="changeButton" destination="UE2-6x-w4e" id="N3A-z7-Gwq"/>
+                        <outlet property="inputTextField" destination="IFy-uP-6R2" id="mwW-Oz-0AF"/>
+                        <outlet property="outputLabel" destination="xpU-Gs-BLi" id="Kpy-s6-RfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
