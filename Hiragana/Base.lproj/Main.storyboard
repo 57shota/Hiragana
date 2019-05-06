@@ -102,6 +102,12 @@
                                     <constraint firstAttribute="height" constant="50" id="rvO-5u-TNN"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章が長くて魔法が使えない！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O5N-3A-KXu">
+                                <rect key="frame" x="20" y="581" width="335" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.52523752860649009" blue="0.53028992123196583" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -114,6 +120,7 @@
                             <constraint firstItem="7Vh-XM-zqy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HWE-Xe-6UQ"/>
                             <constraint firstAttribute="bottom" secondItem="7Vh-XM-zqy" secondAttribute="bottom" id="Jo3-qG-H52"/>
                             <constraint firstItem="sLy-ae-Lyl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="K3I-Dc-Rhe"/>
+                            <constraint firstItem="gWK-Ca-d6T" firstAttribute="top" secondItem="O5N-3A-KXu" secondAttribute="bottom" constant="10" id="MVW-qM-Yrh"/>
                             <constraint firstItem="LbH-Mb-75Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mdk-m3-6Xs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LbH-Mb-75Y" secondAttribute="trailing" id="O1b-Hm-Kyc"/>
                             <constraint firstItem="1ZG-xJ-F2l" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Qav-Du-cer"/>
@@ -125,8 +132,10 @@
                             <constraint firstItem="7Vh-XM-zqy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bNg-zj-YkD"/>
                             <constraint firstItem="T9G-nw-cvW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cH5-Pc-8fx"/>
                             <constraint firstItem="5Xs-ZH-63d" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cMb-QM-dge"/>
+                            <constraint firstItem="O5N-3A-KXu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ctm-Ao-0Qw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWK-Ca-d6T" secondAttribute="trailing" constant="15" id="nYf-TP-ecc"/>
                             <constraint firstItem="UE2-6x-w4e" firstAttribute="top" secondItem="gWK-Ca-d6T" secondAttribute="bottom" constant="50" id="pMc-ie-gGv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5N-3A-KXu" secondAttribute="trailing" constant="20" id="qCW-qs-2DB"/>
                             <constraint firstItem="1ZG-xJ-F2l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s7y-dY-eoA"/>
                             <constraint firstItem="5Xs-ZH-63d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.6" constant="-3.5" id="yKl-YF-3Xh"/>
                             <constraint firstItem="T9G-nw-cvW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="yih-ot-Xvu"/>
@@ -137,6 +146,7 @@
                         <outlet property="changeButton" destination="UE2-6x-w4e" id="N3A-z7-Gwq"/>
                         <outlet property="inputTextField" destination="IFy-uP-6R2" id="mwW-Oz-0AF"/>
                         <outlet property="outputLabel" destination="xpU-Gs-BLi" id="Kpy-s6-RfN"/>
+                        <outlet property="validationLabel" destination="O5N-3A-KXu" id="Mrp-s3-Gug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,7 +13,7 @@ final class ViewModel {
     
     let validationText: Observable<String>
     
-    init(textObservable: Observable<String?>, model: ModelProtocol) {
+    init(inputTextObservable: Observable<String?>, model: ModelProtocol) {
         <#statements#>
     }
     
