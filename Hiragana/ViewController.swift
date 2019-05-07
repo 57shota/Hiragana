@@ -27,11 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.validationText
+            .bind(to: validationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
         
-        
-        
+
     }
-
-
 }
+
 
