@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     private lazy var viewModel = ViewModel(
         inputTextObservable: inputTextField.rx.text.asObservable(),
+        changeButtonClicked: changeButton.rx.tap.asObservable(),
         model: Model()
     )
     

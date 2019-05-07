@@ -13,7 +13,7 @@ final class ViewModel {
     
     let validationText: Observable<String>
     
-    init(inputTextObservable: Observable<String?>, model: ModelProtocol) {
+    init(inputTextObservable: Observable<String?>, changeButtonClicked: Observable<Void>, model: ModelProtocol) {
         
         let event = inputTextObservable
             .flatMap { input -> Observable<Event<Void>> in
