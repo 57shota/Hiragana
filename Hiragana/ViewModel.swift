@@ -49,5 +49,4 @@ extension ModelError {
             return "文章が長くて魔法が使えない！"
         }
     }
-    
 }

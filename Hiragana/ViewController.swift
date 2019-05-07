@@ -44,5 +44,3 @@ class ViewController: UIViewController {
         inputTextField.text = ""
     }
 }
-
-
