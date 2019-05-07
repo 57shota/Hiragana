@@ -28,10 +28,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initialSet()
         
+        inputTextField.rx.text.orEmpty
+            .map { $0.description}
+            .bind(to: outputLabel.rx.text)
+            .disposed(by: disposeBag)
+        
         viewModel.validationText
             .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
-        
 
     }
     
