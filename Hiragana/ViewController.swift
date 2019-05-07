@@ -26,12 +26,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSet()
         
         viewModel.validationText
-            .bind(to: validationLabel.rx.isHidden)
+            .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
         
 
+    }
+    
+    func initialSet() {
+        outputLabel.text = ""
+        inputTextField.text = ""
     }
 }
 
