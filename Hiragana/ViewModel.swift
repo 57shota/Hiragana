@@ -11,7 +11,7 @@ import RxSwift
 
 final class ViewModel {
     
-    let validationText: Observable<Bool>
+    let validationText: Observable<String>
     
     init(inputTextObservable: Observable<String?>, model: ModelProtocol) {
         
@@ -24,32 +24,29 @@ final class ViewModel {
             .share()
         
         self.validationText = event
-            .flatMap { event -> Observable<Bool> in
+            .flatMap { event -> Observable<String> in
                 switch event {
                 case .next:
-                    let notIsHidden = false
-                    return .just(notIsHidden)
+                    return .just("")
                 case let .error(error as ModelError):
                     return .just(error.errorLabel)
                 case .error, .completed:
                     return .empty()
                 }
-                
         }
+        .startWith(ModelError.invalidBlank.errorLabel)
      
-        
-        
     }
 }
 
 extension ModelError {
     
-    var errorLabel: Bool {
+    var errorLabel: String {
         switch self {
         case .invalidBlank:
-            <#code#>
+            return "書いてみよう！"
         case .invalidLendth:
-            <#code#>
+            return "文章が長くて魔法が使えない！"
         }
     }
     
