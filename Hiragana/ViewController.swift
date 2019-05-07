@@ -7,14 +7,40 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var validationLabel: UILabel!
+    
+    private lazy var viewModel = ViewModel(
+        inputTextObservable: inputTextField.rx.text.asObservable(),
+        model: Model()
+    )
+    
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initialSet()
+        
+        inputTextField.rx.text.orEmpty
+            .map { $0.description}
+            .bind(to: outputLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.validationText
+            .bind(to: validationLabel.rx.text)
+            .disposed(by: disposeBag)
+
     }
-
-
+    
+    func initialSet() {
+        outputLabel.text = ""
+        inputTextField.text = ""
+    }
 }
-
