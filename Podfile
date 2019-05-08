@@ -13,6 +13,5 @@ target 'Hiragana' do
     pod 'LTMorphingLabel'
     pod 'SWXMLHash', '~> 4.7.0'
     pod 'IQKeyboardManagerSwift'
-    pod 'SwiftyXMLParser'
 
 end
