@@ -37,6 +37,8 @@ class ViewController: UIViewController {
         viewModel.validationText
             .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
+        
+        viewModel.
 
     }
     

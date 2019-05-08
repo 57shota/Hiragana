@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05144A179EE710097F21CA8239EAC52C"
+               BlueprintIdentifier = "E56B762E413B9E65E8740D0FFD33A279"
                BuildableName = "Pods_Hiragana.framework"
                BlueprintName = "Pods-Hiragana"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "05144A179EE710097F21CA8239EAC52C"
+            BlueprintIdentifier = "E56B762E413B9E65E8740D0FFD33A279"
             BuildableName = "Pods_Hiragana.framework"
             BlueprintName = "Pods-Hiragana"
             ReferencedContainer = "container:Pods.xcodeproj">

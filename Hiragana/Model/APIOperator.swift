@@ -9,9 +9,15 @@
 import Foundation
 import Alamofire
 import SWXMLHash
+import RxSwift
 
 protocol rubyAnalysisAPI {
-    func fetchRuby(text: String)
+    func fetchRuby(text: String) -> Observable<String>
+}
+
+enum SessionError: Error {
+    case invalidXML
+    
 }
 
 final class APIOperator: rubyAnalysisAPI {
@@ -19,33 +25,77 @@ final class APIOperator: rubyAnalysisAPI {
     let api = "https://jlp.yahooapis.jp/FuriganaService/V1/furigana"
     let appID = "dj00aiZpPU5CZEhVbGJsQWtoaCZzPWNvbnN1bWVyc2VjcmV0Jng9Nzg-"
     
-    func fetchRuby(text: String) {
-        
-        let params = [
-            "appid": appID,
-            "sentence": text,
-            "grade": "1"
-        ]
-        
-        Alamofire.request(
-            api,
-            method: .get,
-            parameters: params,
-            encoding: URLEncoding.default,
-            headers: nil
-        )
-            .response { (response) in
-                guard let object = response.data else {
-                    print("Getting API data is failed")
-                    return
-                }
-                print(object)
-                var xml = SWXMLHash.parse(object)
+    func fetchRuby(text: String) -> Observable<String> {
+        return Observable.create { [ weak self ] observer in
+            let params = [
+                "appid": self!.appID,
+                "sentence": text,
+            ]
+
+            Alamofire.request(
+                self!.api,
+                method: .get,
+                parameters: params,
+                encoding: URLEncoding.default,
+                headers: nil
+                )
+                .response { (response) in
+                    print(response)
+                    guard let data = response.data else {
+                        print("cannot get XML")
+                        observer.onError(ModelError.invalidSessionXML)
+                        return
+                    }
+                    print(data)
+                    let xml = SWXMLHash.parse(data)
+                    var ruby = ""
+
+                    let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count - 1
+                    for i in 0...wordCount {
+                        ruby += xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element!.text
+                    }
+                    observer.onNext(ruby)
+                    observer.onCompleted()
+
+            }
+
+            return Disposables.create()
         }
-        
     }
     
-    
-    
+//    func fetchRuby(text: String) -> Observable<Void> {
+//
+//            let params = [
+//                "appid": appID,
+//                "sentence": text,
+//            ]
+//
+//            Alamofire.request(
+//                api,
+//                method: .get,
+//                parameters: params,
+//                encoding: URLEncoding.default,
+//                headers: nil
+//                )
+//                .response { (response) in
+//                    print(response)
+//                    guard let data = response.data else {
+//                        print("cannot get XML")
+//
+//                        return Observable.error(SessionError.invalidXML)
+//                    }
+//                    print(data)
+//                    let xml = SWXMLHash.parse(data)
+//                    var ruby = ""
+//
+//                    let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count - 1
+//                    for i in 0...wordCount {
+//                        ruby += xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element!.text
+//                    }
+//
+//
+//            }
+//
+//    }
     
 }
