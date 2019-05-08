@@ -38,8 +38,9 @@ class ViewController: UIViewController {
             .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
         
-        viewModel.
-
+        viewModel.rubyObservable
+            .bind(to: outputLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
     func initialSet() {

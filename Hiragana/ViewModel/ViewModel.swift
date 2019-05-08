@@ -11,17 +11,19 @@ import RxSwift
 
 final class ViewModel {
     
-    private let disposeBag = DisposeBag()
+    private let api: rubyAnalysisAPI
     let validationText: Observable<String>
     let rubyObservable: Observable<String>
-    var translateText: String
     
-    init(inputTextObservable: Observable<String?>, changeButtonClicked: Observable<Void>, model: ModelProtocol, api: rubyAnalysisAPI) {
+    init(inputTextObservable: Observable<String?>, changeButtonClicked: Observable<Void>, model: ModelProtocol, api: rubyAnalysisAPI = APIOperator()) {
+        
+        self.api = api
+        var test = ""
         
         let event = inputTextObservable
             .flatMap { input -> Observable<Event<Void>> in
                 if let text = input {
-                    self.translateText = text
+                    test = text
                 }
                 return model
                     .validate(text: input)
@@ -43,9 +45,9 @@ final class ViewModel {
             .startWith(ModelError.invalidBlank.errorLabel)
         
         let tapEvent = changeButtonClicked
-            .flatMap { () -> Observable<Event<String>> in
+            .flatMap { (result) -> Observable<Event<String>> in
                 return api
-                    .fetchRuby(text: self.translateText)
+                    .fetchRuby(text: test)
                     .materialize()
         }
         .share()
@@ -61,20 +63,6 @@ final class ViewModel {
                     return .empty()
                 }
             }
-        
-        
-        
-        
-        
-        
-//        tapEvent
-//            .flatMap { event -> Observable<String> in
-//                event.element.map(Observable.just) ?? .empty()
-//            }
-//            .subscribe(onNext: { error in
-//                // TODO: Error Handling
-//            })
-//            .disposed(by: disposeBag)
     }
 }
 
