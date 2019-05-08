@@ -12,10 +12,6 @@ protocol ModelProtocol {
     func validate(text: String?) -> Observable<Void>
 }
 
-enum ModelError: Error {
-    case invalidLendth
-    case invalidBlank
-}
 
 final class Model: ModelProtocol {
     

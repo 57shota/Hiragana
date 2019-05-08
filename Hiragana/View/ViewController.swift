@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     private lazy var viewModel = ViewModel(
         inputTextObservable: inputTextField.rx.text.asObservable(),
+        changeButtonClicked: changeButton.rx.tap.asObservable(),
         model: Model()
     )
     
@@ -36,7 +37,10 @@ class ViewController: UIViewController {
         viewModel.validationText
             .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
-
+        
+        viewModel.rubyObservable
+            .bind(to: outputLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
     func initialSet() {

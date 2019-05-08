@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B35DD899175801B5130DCBE7 /* Pods_Hiragana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F49B67D89C1541625667E8A /* Pods_Hiragana.framework */; };
+		CA61DC6C2281BD5C006A9B02 /* APIOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61DC6B2281BD5C006A9B02 /* APIOperator.swift */; };
+		CA61DC6F2282B0F7006A9B02 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61DC6E2282B0F7006A9B02 /* ErrorController.swift */; };
 		CA720CAD227EC54E0097BEE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */; };
 		CA720CAF227EC54E0097BEE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA720CAE227EC54E0097BEE3 /* ViewController.swift */; };
 		CA720CB2227EC54E0097BEE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA720CB0227EC54E0097BEE3 /* Main.storyboard */; };
@@ -22,6 +24,9 @@
 		01D4960C198EA459BCEC0EBD /* Pods-Hiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiragana.debug.xcconfig"; path = "Target Support Files/Pods-Hiragana/Pods-Hiragana.debug.xcconfig"; sourceTree = "<group>"; };
 		4C39B567528C840D0BD56A78 /* Pods-Hiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiragana.release.xcconfig"; path = "Target Support Files/Pods-Hiragana/Pods-Hiragana.release.xcconfig"; sourceTree = "<group>"; };
 		5F49B67D89C1541625667E8A /* Pods_Hiragana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hiragana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA61DC6B2281BD5C006A9B02 /* APIOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperator.swift; sourceTree = "<group>"; };
+		CA61DC6D2281DED1006A9B02 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CA61DC6E2282B0F7006A9B02 /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		CA720CA9227EC54E0097BEE3 /* Hiragana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hiragana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA720CAE227EC54E0097BEE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +68,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA61DC682281ADA2006A9B02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA720CC3228011200097BEE3 /* Model.swift */,
+				CA61DC6E2282B0F7006A9B02 /* ErrorController.swift */,
+				CA61DC6B2281BD5C006A9B02 /* APIOperator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA61DC692281ADAB006A9B02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA720CAE227EC54E0097BEE3 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA61DC6A2281ADB6006A9B02 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA720CC1228010850097BEE3 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CA720CA0227EC54E0097BEE3 = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +115,16 @@
 		CA720CAB227EC54E0097BEE3 /* Hiragana */ = {
 			isa = PBXGroup;
 			children = (
-				CA720CC0227FF48A0097BEE3 /* Fonts */,
+				CA61DC6D2281DED1006A9B02 /* MyPlayground.playground */,
 				CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */,
-				CA720CC3228011200097BEE3 /* Model.swift */,
-				CA720CC1228010850097BEE3 /* ViewModel.swift */,
-				CA720CAE227EC54E0097BEE3 /* ViewController.swift */,
 				CA720CB0227EC54E0097BEE3 /* Main.storyboard */,
 				CA720CB3227EC54F0097BEE3 /* Assets.xcassets */,
 				CA720CB5227EC54F0097BEE3 /* LaunchScreen.storyboard */,
 				CA720CB8227EC54F0097BEE3 /* Info.plist */,
+				CA720CC0227FF48A0097BEE3 /* Fonts */,
+				CA61DC682281ADA2006A9B02 /* Model */,
+				CA61DC6A2281ADB6006A9B02 /* ViewModel */,
+				CA61DC692281ADAB006A9B02 /* View */,
 			);
 			path = Hiragana;
 			sourceTree = "<group>";
@@ -207,20 +239,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Hiragana/Pods-Hiragana-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -236,7 +272,9 @@
 			files = (
 				CA720CAF227EC54E0097BEE3 /* ViewController.swift in Sources */,
 				CA720CC2228010850097BEE3 /* ViewModel.swift in Sources */,
+				CA61DC6F2282B0F7006A9B02 /* ErrorController.swift in Sources */,
 				CA720CAD227EC54E0097BEE3 /* AppDelegate.swift in Sources */,
+				CA61DC6C2281BD5C006A9B02 /* APIOperator.swift in Sources */,
 				CA720CC4228011200097BEE3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

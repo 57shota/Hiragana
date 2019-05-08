@@ -11,5 +11,7 @@ target 'Hiragana' do
     pod 'RxCocoa'
     pod 'Alamofire'
     pod 'LTMorphingLabel'
+    pod 'SWXMLHash', '~> 4.7.0'
+    pod 'IQKeyboardManagerSwift'
 
 end
