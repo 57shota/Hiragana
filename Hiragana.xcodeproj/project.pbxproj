@@ -25,7 +25,6 @@
 		4C39B567528C840D0BD56A78 /* Pods-Hiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiragana.release.xcconfig"; path = "Target Support Files/Pods-Hiragana/Pods-Hiragana.release.xcconfig"; sourceTree = "<group>"; };
 		5F49B67D89C1541625667E8A /* Pods_Hiragana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hiragana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA61DC6B2281BD5C006A9B02 /* APIOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperator.swift; sourceTree = "<group>"; };
-		CA61DC6D2281DED1006A9B02 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CA61DC6E2282B0F7006A9B02 /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		CA720CA9227EC54E0097BEE3 /* Hiragana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hiragana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +114,6 @@
 		CA720CAB227EC54E0097BEE3 /* Hiragana */ = {
 			isa = PBXGroup;
 			children = (
-				CA61DC6D2281DED1006A9B02 /* MyPlayground.playground */,
 				CA720CAC227EC54E0097BEE3 /* AppDelegate.swift */,
 				CA720CB0227EC54E0097BEE3 /* Main.storyboard */,
 				CA720CB3227EC54F0097BEE3 /* Assets.xcassets */,

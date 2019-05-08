@@ -49,18 +49,21 @@ final class APIOperator: rubyAnalysisAPI {
                     print(data)
                     let xml = SWXMLHash.parse(data)
                     var ruby = ""
-
-                    let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count - 1
-                    for i in 0...wordCount {
-                        if let furigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element?.text {
-                            ruby += furigana
-                        }else if let notFurigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Surface"].element?.text {
-                            ruby += notFurigana
+                    let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count
+                    
+                    if wordCount == 0 {
+                        observer.onError(ModelError.invalidInput)
+                    }else{
+                        for i in 0...wordCount - 1 {
+                            if let furigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element?.text {
+                                ruby += furigana
+                            }else if let notFurigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Surface"].element?.text {
+                                ruby += notFurigana
+                            }
                         }
+                        observer.onNext(ruby)
+                        observer.onCompleted()
                     }
-                    observer.onNext(ruby)
-                    observer.onCompleted()
-
             }
 
             return Disposables.create()
