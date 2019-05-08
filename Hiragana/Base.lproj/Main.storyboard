@@ -58,7 +58,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Output" translatesAutoresizingMaskIntoConstraints="NO" id="pa4-Y1-9tn">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天気は雨です" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xpU-Gs-BLi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天気は雨です" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xpU-Gs-BLi" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                         <rect key="frame" x="20" y="37.666666666666629" width="335" height="19"/>
                                         <fontDescription key="fontDescription" name="KaiTi" family="KaiTi" pointSize="19"/>
                                         <nil key="highlightedColor"/>
