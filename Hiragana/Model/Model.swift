@@ -26,7 +26,7 @@ final class Model: ModelProtocol {
             case true:
                 return Observable.error(ModelError.invalidBlank)
             case false:
-                let textLimit = 30
+                let textLimit = 15
                 if text.count > textLimit {
                     return Observable.error(ModelError.invalidLendth)
                 }else{
