@@ -52,7 +52,11 @@ final class APIOperator: rubyAnalysisAPI {
 
                     let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count - 1
                     for i in 0...wordCount {
-                        ruby += xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element!.text
+                        if let furigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element?.text {
+                            ruby += furigana
+                        }else if let notFurigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Surface"].element?.text {
+                            ruby += notFurigana
+                        }
                     }
                     observer.onNext(ruby)
                     observer.onCompleted()
@@ -62,40 +66,4 @@ final class APIOperator: rubyAnalysisAPI {
             return Disposables.create()
         }
     }
-    
-//    func fetchRuby(text: String) -> Observable<Void> {
-//
-//            let params = [
-//                "appid": appID,
-//                "sentence": text,
-//            ]
-//
-//            Alamofire.request(
-//                api,
-//                method: .get,
-//                parameters: params,
-//                encoding: URLEncoding.default,
-//                headers: nil
-//                )
-//                .response { (response) in
-//                    print(response)
-//                    guard let data = response.data else {
-//                        print("cannot get XML")
-//
-//                        return Observable.error(SessionError.invalidXML)
-//                    }
-//                    print(data)
-//                    let xml = SWXMLHash.parse(data)
-//                    var ruby = ""
-//
-//                    let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count - 1
-//                    for i in 0...wordCount {
-//                        ruby += xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element!.text
-//                    }
-//
-//
-//            }
-//
-//    }
-    
 }
