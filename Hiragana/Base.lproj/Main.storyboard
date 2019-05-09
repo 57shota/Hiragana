@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -175,16 +174,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iil-9Y-PBR">
-                                <rect key="frame" x="15" y="44" width="345" height="748"/>
+                                <rect key="frame" x="15" y="44" width="345" height="714"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="flp-Si-h3W">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="748"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="714"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPe-9j-NEF" userLabel="TitleView">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="204"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="187"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-Qb-hlK">
-                                                        <rect key="frame" x="91.666666666666671" y="71" width="161.66666666666663" height="62"/>
+                                                        <rect key="frame" x="91.666666666666671" y="62.666666666666671" width="161.66666666666663" height="62"/>
                                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -197,7 +196,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Y-VC-1mr">
-                                                <rect key="frame" x="15" y="204" width="315" height="340"/>
+                                                <rect key="frame" x="15" y="187" width="315" height="340"/>
                                                 <string key="text">今夜は満月….
 
 
@@ -221,10 +220,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lka-ev-IW2" userLabel="ButtonView">
-                                                <rect key="frame" x="0.0" y="544" width="345" height="204"/>
+                                                <rect key="frame" x="0.0" y="527" width="345" height="187"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IM-03-CxQ">
-                                                        <rect key="frame" x="50" y="86" width="245" height="32"/>
+                                                        <rect key="frame" x="50" y="77.666666666666629" width="245" height="32"/>
                                                         <fontDescription key="fontDescription" name="KaiTi" family="KaiTi" pointSize="20"/>
                                                         <state key="normal" title="やってみる！">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -269,10 +268,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="top" secondItem="iwR-9i-yA7" secondAttribute="top" id="75R-XJ-Zhb"/>
-                            <constraint firstAttribute="trailing" secondItem="Iil-9Y-PBR" secondAttribute="trailing" constant="15" id="8fy-oo-Lyv"/>
-                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="leading" secondItem="9Ty-EO-o2I" secondAttribute="leading" constant="15" id="hcj-4T-OuD"/>
-                            <constraint firstAttribute="bottom" secondItem="Iil-9Y-PBR" secondAttribute="bottom" constant="20" id="l60-NQ-AYO"/>
+                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="top" secondItem="iwR-9i-yA7" secondAttribute="top" id="OAv-6U-Jso"/>
+                            <constraint firstItem="iwR-9i-yA7" firstAttribute="bottom" secondItem="Iil-9Y-PBR" secondAttribute="bottom" constant="20" id="VV5-FY-Rx3"/>
+                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="leading" secondItem="iwR-9i-yA7" secondAttribute="leading" constant="15" id="d39-mi-pgT"/>
+                            <constraint firstItem="iwR-9i-yA7" firstAttribute="trailing" secondItem="Iil-9Y-PBR" secondAttribute="trailing" constant="15" id="gMv-Bu-WhF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iwR-9i-yA7"/>
                     </view>
