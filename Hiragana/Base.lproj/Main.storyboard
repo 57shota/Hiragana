@@ -18,7 +18,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hiragana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Hiragana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +165,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.4384236453202"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="Ua9-TT-Ads">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9kI-ae-rcx" customClass="WelcomeViewController" customModule="Hiragana" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ty-EO-o2I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iil-9Y-PBR">
+                                <rect key="frame" x="15" y="44" width="345" height="748"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="flp-Si-h3W">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="748"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPe-9j-NEF" userLabel="TitleView">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="204"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-Qb-hlK">
+                                                        <rect key="frame" x="91.666666666666671" y="71" width="161.66666666666663" height="62"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="gh3-Qb-hlK" firstAttribute="centerY" secondItem="WPe-9j-NEF" secondAttribute="centerY" id="D98-EZ-7j7"/>
+                                                    <constraint firstItem="gh3-Qb-hlK" firstAttribute="centerX" secondItem="WPe-9j-NEF" secondAttribute="centerX" id="Tnw-Oi-NoT"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Y-VC-1mr">
+                                                <rect key="frame" x="15" y="204" width="315" height="340"/>
+                                                <string key="text">今夜は満月….
+
+
+
+あなたは不思議な力が宿った巻物を
+
+手に入れました。
+
+
+
+それは書いた文字が空に浮かび、
+
+全てひらがなに変えてしまう不思議な巻物です。
+
+
+
+
+巻物に文字を書いて、魔法をかけてみましょう。</string>
+                                                <fontDescription key="fontDescription" name="KaiTi" family="KaiTi" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lka-ev-IW2" userLabel="ButtonView">
+                                                <rect key="frame" x="0.0" y="544" width="345" height="204"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IM-03-CxQ">
+                                                        <rect key="frame" x="50" y="86" width="245" height="32"/>
+                                                        <fontDescription key="fontDescription" name="KaiTi" family="KaiTi" pointSize="20"/>
+                                                        <state key="normal" title="やってみる！">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="actionButton:" destination="9kI-ae-rcx" eventType="touchUpInside" id="juU-c1-0uB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="7IM-03-CxQ" firstAttribute="centerY" secondItem="lka-ev-IW2" secondAttribute="centerY" id="Bes-mx-hVl"/>
+                                                    <constraint firstItem="7IM-03-CxQ" firstAttribute="centerX" secondItem="lka-ev-IW2" secondAttribute="centerX" id="Qdf-i4-ZQU"/>
+                                                    <constraint firstItem="7IM-03-CxQ" firstAttribute="leading" secondItem="lka-ev-IW2" secondAttribute="leading" constant="50" id="jee-7A-xfZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7IM-03-CxQ" secondAttribute="trailing" constant="50" id="zAa-PV-uDE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lka-ev-IW2" firstAttribute="top" secondItem="R1Y-VC-1mr" secondAttribute="bottom" id="0dP-LT-hQD"/>
+                                            <constraint firstAttribute="bottom" secondItem="lka-ev-IW2" secondAttribute="bottom" id="1EY-PS-8G0"/>
+                                            <constraint firstAttribute="trailing" secondItem="WPe-9j-NEF" secondAttribute="trailing" id="5pW-di-OMj"/>
+                                            <constraint firstItem="R1Y-VC-1mr" firstAttribute="top" secondItem="WPe-9j-NEF" secondAttribute="bottom" id="W3x-mF-XOQ"/>
+                                            <constraint firstItem="lka-ev-IW2" firstAttribute="leading" secondItem="flp-Si-h3W" secondAttribute="leading" id="ceh-9y-M4z"/>
+                                            <constraint firstItem="WPe-9j-NEF" firstAttribute="leading" secondItem="flp-Si-h3W" secondAttribute="leading" id="eOy-Gx-Bu3"/>
+                                            <constraint firstItem="R1Y-VC-1mr" firstAttribute="centerY" secondItem="flp-Si-h3W" secondAttribute="centerY" id="fgw-In-lsZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="lka-ev-IW2" secondAttribute="trailing" id="lFP-Dg-QFS"/>
+                                            <constraint firstItem="WPe-9j-NEF" firstAttribute="top" secondItem="flp-Si-h3W" secondAttribute="top" id="n7B-Oq-yeB"/>
+                                            <constraint firstAttribute="trailing" secondItem="R1Y-VC-1mr" secondAttribute="trailing" constant="15" id="qVl-QF-SFY"/>
+                                            <constraint firstItem="R1Y-VC-1mr" firstAttribute="leading" secondItem="flp-Si-h3W" secondAttribute="leading" constant="15" id="rxH-RJ-gMx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="flp-Si-h3W" secondAttribute="trailing" id="IYs-73-3MK"/>
+                                    <constraint firstAttribute="bottom" secondItem="flp-Si-h3W" secondAttribute="bottom" id="V1f-YE-Pg0"/>
+                                    <constraint firstItem="flp-Si-h3W" firstAttribute="leading" secondItem="Iil-9Y-PBR" secondAttribute="leading" id="bUF-0j-dZx"/>
+                                    <constraint firstItem="flp-Si-h3W" firstAttribute="top" secondItem="Iil-9Y-PBR" secondAttribute="top" id="fPT-Gj-xIP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="top" secondItem="iwR-9i-yA7" secondAttribute="top" id="75R-XJ-Zhb"/>
+                            <constraint firstAttribute="trailing" secondItem="Iil-9Y-PBR" secondAttribute="trailing" constant="15" id="8fy-oo-Lyv"/>
+                            <constraint firstItem="Iil-9Y-PBR" firstAttribute="leading" secondItem="9Ty-EO-o2I" secondAttribute="leading" constant="15" id="hcj-4T-OuD"/>
+                            <constraint firstAttribute="bottom" secondItem="Iil-9Y-PBR" secondAttribute="bottom" constant="20" id="l60-NQ-AYO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iwR-9i-yA7"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="7IM-03-CxQ" id="cyg-zD-UFa"/>
+                        <outlet property="modalView" destination="Iil-9Y-PBR" id="u2S-cN-Xbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tSh-ny-nDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="136.69950738916256"/>
         </scene>
     </scenes>
     <resources>
