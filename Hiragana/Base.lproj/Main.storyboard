@@ -108,6 +108,13 @@
                                 <color key="textColor" red="1" green="0.52523752860649009" blue="0.53028992123196583" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MagicCircle" translatesAutoresizingMaskIntoConstraints="NO" id="y6Y-Wo-bin">
+                                <rect key="frame" x="72" y="660.66666666666663" width="231" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="4WW-BF-UQe"/>
+                                    <constraint firstAttribute="height" constant="135" id="BnS-hQ-lOi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -116,6 +123,7 @@
                             <constraint firstItem="gWK-Ca-d6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1br-VF-Dtd"/>
                             <constraint firstItem="1ZG-xJ-F2l" firstAttribute="top" secondItem="T9G-nw-cvW" secondAttribute="bottom" constant="20" id="3PS-cg-D3N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UE2-6x-w4e" secondAttribute="bottom" constant="30" id="44s-SJ-KLL"/>
+                            <constraint firstItem="y6Y-Wo-bin" firstAttribute="centerY" secondItem="UE2-6x-w4e" secondAttribute="centerY" id="CNV-uO-wCP"/>
                             <constraint firstItem="5Xs-ZH-63d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="Ff2-zb-RXV"/>
                             <constraint firstItem="7Vh-XM-zqy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HWE-Xe-6UQ"/>
                             <constraint firstAttribute="bottom" secondItem="7Vh-XM-zqy" secondAttribute="bottom" id="Jo3-qG-H52"/>
@@ -136,6 +144,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gWK-Ca-d6T" secondAttribute="trailing" constant="10" id="nYf-TP-ecc"/>
                             <constraint firstItem="UE2-6x-w4e" firstAttribute="top" secondItem="gWK-Ca-d6T" secondAttribute="bottom" constant="50" id="pMc-ie-gGv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O5N-3A-KXu" secondAttribute="trailing" constant="20" id="qCW-qs-2DB"/>
+                            <constraint firstItem="y6Y-Wo-bin" firstAttribute="centerX" secondItem="UE2-6x-w4e" secondAttribute="centerX" id="qhf-sg-rad"/>
                             <constraint firstItem="1ZG-xJ-F2l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s7y-dY-eoA"/>
                             <constraint firstItem="5Xs-ZH-63d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.6" constant="-3.5" id="yKl-YF-3Xh"/>
                             <constraint firstItem="T9G-nw-cvW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="yih-ot-Xvu"/>
@@ -144,6 +153,10 @@
                     </view>
                     <connections>
                         <outlet property="changeButton" destination="UE2-6x-w4e" id="N3A-z7-Gwq"/>
+                        <outlet property="circleImageView" destination="y6Y-Wo-bin" id="GGr-V7-Tec"/>
+                        <outlet property="cloudLImageView" destination="5Xs-ZH-63d" id="vsI-dt-YX3"/>
+                        <outlet property="cloudMImageView" destination="sLy-ae-Lyl" id="UJA-pY-t5D"/>
+                        <outlet property="cloudSImageView" destination="1ZG-xJ-F2l" id="N9m-bS-JoL"/>
                         <outlet property="inputTextField" destination="IFy-uP-6R2" id="mwW-Oz-0AF"/>
                         <outlet property="outputLabel" destination="xpU-Gs-BLi" id="Kpy-s6-RfN"/>
                         <outlet property="validationLabel" destination="O5N-3A-KXu" id="Mrp-s3-Gug"/>
@@ -161,6 +174,7 @@
         <image name="CloudM" width="298" height="110"/>
         <image name="CloudS" width="212" height="54"/>
         <image name="Input" width="350" height="52"/>
+        <image name="MagicCircle" width="302" height="342"/>
         <image name="Output" width="375" height="94"/>
     </resources>
 </document>
