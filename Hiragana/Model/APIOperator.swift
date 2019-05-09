@@ -15,11 +15,6 @@ protocol rubyAnalysisAPI {
     func fetchRuby(text: String) -> Observable<String>
 }
 
-enum SessionError: Error {
-    case invalidXML
-    
-}
-
 final class APIOperator: rubyAnalysisAPI {
     
     let api = "https://jlp.yahooapis.jp/FuriganaService/V1/furigana"
@@ -52,7 +47,7 @@ final class APIOperator: rubyAnalysisAPI {
                     let wordCount = xml["ResultSet"]["Result"]["WordList"]["Word"].all.count
                     
                     if wordCount == 0 {
-                        observer.onError(ModelError.invalidInput)
+                        observer.onError(ModelError.invalidXMLItem)
                     }else{
                         for i in 0...wordCount - 1 {
                             if let furigana = xml["ResultSet"]["Result"]["WordList"]["Word"][i]["Furigana"].element?.text {

@@ -76,7 +76,7 @@ extension ModelError {
             return "文章が長くて魔法が使えない！"
         case .invalidSessionXML:
             return "データ取得に失敗しました"
-        case .invalidInput:
+        case .invalidXMLItem:
             return ""
         }
         

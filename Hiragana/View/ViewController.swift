@@ -39,6 +39,17 @@ class ViewController: UIViewController {
             .bind(to: validationLabel.rx.text)
             .disposed(by: disposeBag)
         
+        viewModel.validationText
+            .subscribe(onNext: { (str) in
+                switch str {
+                case ModelError.invalidLendth.errorLabel, ModelError.invalidBlank.errorLabel:
+                    self.changeButton.isEnabled = false
+                default:
+                    self.changeButton.isEnabled = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.rubyObservable
             .bind(to: outputLabel.rx.text)
             .disposed(by: disposeBag)
@@ -63,6 +74,5 @@ extension ViewController: LTMorphingLabelDelegate {
 //        self.outputLabel.morphingEffect = .scale
 //    }
     
-    
-    
+
 }
