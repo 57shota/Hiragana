@@ -12,5 +12,5 @@ enum ModelError: Error {
     case invalidLendth
     case invalidBlank
     case invalidSessionXML
-    case invalidInput
+    case invalidXMLItem
 }
