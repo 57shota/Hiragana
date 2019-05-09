@@ -12,7 +12,6 @@ protocol ModelProtocol {
     func validate(text: String?) -> Observable<Void>
 }
 
-
 final class Model: ModelProtocol {
     
     func validate(text: String?) -> Observable<Void> {

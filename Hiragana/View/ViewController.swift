@@ -53,26 +53,11 @@ class ViewController: UIViewController {
         viewModel.rubyObservable
             .bind(to: outputLabel.rx.text)
             .disposed(by: disposeBag)
-        
-        viewModel.rubyObservable
-            .subscribe(onNext: { (event) in
-                self.outputLabel.morphingEffect = .sparkle
-            })
-            .disposed(by: disposeBag)
     }
     
     func initialSet() {
         outputLabel.text = ""
         inputTextField.text = ""
-        outputLabel.delegate = self
+        outputLabel.morphingEffect = .sparkle
     }
-}
-
-extension ViewController: LTMorphingLabelDelegate {
-    
-//    func morphingDidComplete(_ label: LTMorphingLabel) {
-//        self.outputLabel.morphingEffect = .scale
-//    }
-    
-
 }
