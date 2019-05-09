@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSet()
-        
+
         inputTextField.rx.text.orEmpty
             .map { $0.description}
             .bind(to: outputLabel.rx.text)
@@ -78,8 +78,17 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 25, delay: 0.0, options: [.curveEaseInOut, .autoreverse, .repeat], animations: {
             self.cloudLImageView.center.x += 200
         })
-        
         isEnabledCircleImageAnimation(animate: false)
+        
+        var timer:Timer = Timer()
+        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: "changeView", userInfo: nil, repeats: false)
+    }
+    
+    @objc func changeView() {
+        let storyboard = self.storyboard!
+        let welcome = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+        welcome.modalTransitionStyle = .crossDissolve
+        self.present(welcome, animated: true, completion: nil)
     }
     
     func isEnabledCircleImageAnimation(animate result: Bool) {
