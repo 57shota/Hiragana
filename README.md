@@ -1,5 +1,9 @@
 # Hiragana
 
+
+![hiragana](https://user-images.githubusercontent.com/41004390/57595639-a32b3d00-7589-11e9-9e72-bc26b271e5d8.gif)
+
+
 ## Development Environment
 - Swift 5.0
 - Xcode 10.2.1
