@@ -11,23 +11,21 @@
 - Design
   - Sketch.app
 - API
-  - [Twitter standard search API](https://developer.twitter.com/en/docs/tweets/search/api-reference/get-search-tweets.html)
+  - Japanese Ruby Analysis
+  https://developer.yahoo.co.jp/webapi/jlp/
 
 ## Libraries
 - Alamofire
 - IQKeyboard
 - RxSwift
 - RxCocoa
-- SwiftyJSON
+- LTMorphingLabel
+- SWXMLHash
 
 ## Architecture
-- MVP
+- MVVM
 
 ## Contents
-1. Enter words you want to search for.
-
-That's all.
-
-# Please Enter your own ConsumerKey and ConsumerSecret
-## [Apply for access](https://developer.twitter.com/en/apply-for-access)
+1. When you input text, it is reflected to outputField
+2. Once Button is pushed, Japanese Kanji is translated into Hiragana in outputField
 
